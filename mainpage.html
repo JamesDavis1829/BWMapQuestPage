@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapQuestTest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <style>
+        html, body {
+            height : 100%;
+            margin : 0;
+            padding: 0;
+        }
+        #map{
+            float : left;
+            height : 100%;
+            width : 80%;
+        }
+        #controls {
+            float: left;
+            height: 100%;
+            width: 20%;
+        }
+        .controlBar{
+            padding-left : 3%;
+        }
+    </style>
+</head>
+<body onload="loadLocations(); assignStartPoint()">
+    <div id="controls">
+        <h2 class="controlBar">Select your starting point</h2>
+        <div class="controlBar">
+            <select onchange="assignStartPoint()" id="selectedStartPoint"></select>
+        </div>
+        <div id="locationSelection"></div>
+        <div id="routeNarrative" class="controlBar"></div>
+
+    </div>
+    <div id="map" style="height : 100%"></div>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=xPUYrGoRR8v1QMMkQozzKJtvTgGG2H1A"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=xPUYrGoRR8v1QMMkQozzKJtvTgGG2H1A"></script>
+    <script src="js/maphandler.js"></script>
+</body>
+</html>
