@@ -125,6 +125,7 @@ function route(){
                     html += (i+1) + ". ";
                     html += maneuvers[i].narrative + "<br>";
                 }
+                html+="<br>Route Time: " + Math.round(data.route.realTime/60) + " mins";
 
                 L.DomUtil.get("routeNarrative").innerHTML = html;
             }
